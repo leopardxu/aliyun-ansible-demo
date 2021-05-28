@@ -1,0 +1,6 @@
+---
+- block:
+  - include: vpc-create.yml
+  - include: vswitch-create.yml
+  - include: security-create.yml
+  - include: ecs-create.yml

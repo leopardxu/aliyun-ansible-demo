@@ -1,0 +1,9 @@
+- hosts: tag_demo_demo_interview
+  max_fail_percentage: 0
+  gather_facts: False
+  remote_user: root
+  become: yes
+  vars_files:
+    - group_vars/all.yml
+  roles:
+    - role: docker-nginx

@@ -1,0 +1,5 @@
+---
+- block:
+  - include: iptables-set.yml
+  - include: docker-install.yml
+  - include: nginx-start.yml

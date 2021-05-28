@@ -1,0 +1,17 @@
+---
+    - name: Get the existing instances
+      ali_instance_info:
+        alicloud_region: '{{ alicloud_region }}'
+        alicloud_zone: '{{ alicloud_zone }}'
+        instance_names:
+          - '{{ instance_name }}'
+      register: instances
+
+    - name: Delete the existing instances
+      ali_instance:
+        alicloud_region: '{{ alicloud_region }}'
+        alicloud_zone: '{{ alicloud_zone }}'
+        instance_ids: '{{ instances.ids }}'
+        force: true
+        state: absent
+      when: instances.ids

@@ -1,0 +1,4 @@
+---
+- block:
+  - include: destory-ecs.yml
+  - include: destory-vpc-vswitch-security.yml
